@@ -6,7 +6,6 @@ public class Cliente {
     private Conta conta;
 
     public Cliente(String nome, String sobrenome){
-        System.out.println("Criando o cliente "+ nome + " " + sobrenome);
         this.nome = nome;
         this.sobrenome = sobrenome;
     }
