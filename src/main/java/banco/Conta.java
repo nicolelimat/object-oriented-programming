@@ -5,20 +5,25 @@ public class Conta {
 
     public Conta (double saldoInicial){
         saldo = saldoInicial;
-        System.out.println("Criando uma conta com o saldo de R$ "+ saldoInicial);
     }
 
     public double getSaldo(){
         return saldo;
     }
 
-    public void depositar(double valor){
-        System.out.println("Depositando R$ " + valor);
-        saldo += valor;
+    public boolean depositar(double valor){
+        if(valor >= 0){
+            saldo += valor;
+            return true;
+        }
+        return false;
     }
 
-    public void sacar(double valor){
-        System.out.println("Sacando R$ " + valor);
-        saldo -= valor;
+    public boolean sacar(double valor){
+        if(saldo >= valor){
+            saldo -= valor;
+            return true;
+        }
+        return false;
     }
 }
