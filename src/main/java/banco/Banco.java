@@ -1,23 +1,28 @@
 package banco;
 
+import java.util.ArrayList;
+
 public class Banco {
-    private Cliente [] clientes;
-    private int numeroDeClientes;
+    private ArrayList<Cliente> clientes;
+//    private int numeroDeClientes;
 
     public Banco(){
-        this.clientes = new Cliente[5];
+//        this.clientes = new Cliente[5];
+        clientes = new ArrayList<>();
     }
 
     public void adicionarCliente(Cliente cliente){
-        clientes[numeroDeClientes] = cliente;
-        numeroDeClientes ++;
+//        clientes[numeroDeClientes] = cliente;
+//        numeroDeClientes ++;
+        clientes.add(cliente);
     }
 
     public Cliente getCliente(int indice){
-        return clientes[indice];
+        return clientes.get(indice);
     }
 
     public int getNumeroDeClientes(){
-        return numeroDeClientes;
+//        return numeroDeClientes;
+        return clientes.size();
     }
 }
