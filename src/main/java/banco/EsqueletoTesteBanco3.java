@@ -14,7 +14,7 @@ public class EsqueletoTesteBanco3 {
     banco.adicionarCliente(brunoHenrique);
     cliente = banco.getCliente(0);
     cliente.adicionarConta(new ContaPoupanca(50000.00, 0.03));
-    cliente.adicionarConta(new ContaCorrente(220000.00, 40000.00));
+//    cliente.adicionarConta(new ContaCorrente(220000.00, 40000.00));
 
     Cliente outroBrunoHenrique = new Cliente("Bruno", "Henrique");
     banco.adicionarCliente(outroBrunoHenrique);
