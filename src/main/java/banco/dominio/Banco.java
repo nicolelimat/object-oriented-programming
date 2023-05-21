@@ -1,11 +1,13 @@
-package banco;
+package banco.dominio;
 
 import java.util.ArrayList;
 
 public class Banco {
+    private static Banco banco = new Banco();
+    ;
     private ArrayList<Cliente> clientes;
 
-    public Banco(){
+    private Banco(){
         clientes = new ArrayList<>();
     }
 
@@ -30,5 +32,9 @@ public class Banco {
 
     public int getNumeroDeClientes(){
         return clientes.size();
+    }
+
+    public static Banco getBanco(){
+        return banco;
     }
 }

@@ -1,4 +1,4 @@
-package banco;
+package banco.dominio;
 
 import java.util.ArrayList;
 
@@ -6,15 +6,11 @@ public class Cliente {
     private String nome;
     private String sobrenome;
     private ArrayList<Conta> contas;
-    private ContaPoupanca contaPoupanca;
-    private ContaCorrente contaCorrente;
 
     public Cliente(String nome, String sobrenome){
         this.nome = nome;
         this.sobrenome = sobrenome;
         contas = new ArrayList<>();
-        contaPoupanca = null;
-        contaCorrente = null;
     }
 
     public String getNome() {
@@ -45,19 +41,4 @@ public class Cliente {
         return contas.size();
     }
 
-    public ContaPoupanca getContaPoupanca() {
-        return contaPoupanca;
-    }
-
-    public void setContaPoupanca(ContaPoupanca contaPoupanca) {
-        this.contaPoupanca = contaPoupanca;
-    }
-
-    public ContaCorrente getContaCorrente() {
-        return contaCorrente;
-    }
-
-    public void setContaCorrente(ContaCorrente contaCorrente) {
-        this.contaCorrente = contaCorrente;
-    }
 }

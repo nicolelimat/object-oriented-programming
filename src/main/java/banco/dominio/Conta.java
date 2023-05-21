@@ -1,4 +1,4 @@
-package banco;
+package banco.dominio;
 
 public class Conta {
     protected double saldo;
